@@ -18,8 +18,8 @@ import requests
 import datetime
 import json
 
-auth_token = 'dato-api-fb8a118d-d504-437d-b66a-1e45095d690e'
-workspaces = [27405, 27254, 27500, 27501, 17259]
+auth_token = ''
+workspaces = []
 
 dr_request_header = {
         'Content-Type': 'application/json',
