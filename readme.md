@@ -1,7 +1,7 @@
 # Datorama Auto-Pylot
 This repository contains automation scripts implemented in Python 3 for managing data streams in Datorama. Especially useful for large accounts (e.g: large trading desks with instances containing thousands of streams)
 
-#### auto_process.py
+### auto_process.py
 **Purpose** 
 Re-processes all failed jobs of every enabled API data stream.
 
@@ -19,7 +19,7 @@ workspaces = [31415, 16180, 27183]
 **Known Issues & Limitations**
 Some functions within this script rely on endpoints that return cached results (with approx. 20 min lags) whereas others use endpoints that return live data. Therefore, running this script over relatively short intervals (e.g 10 minutes) may lead to temporary errors. These errors will usually be resolved once the lag period has passed.
 
-#### auto_create.py
+### auto_create.py
 **Purpose** 
 Creates data streams for new advertiser profiles
 
@@ -35,8 +35,9 @@ workspace_source_list = {
     47501: ['Facebook-Ads']
 }
 ```
-- **Data stream settings**: 
-      - Create a JSON configuration file for each data source containing the default settings of the stream to be created. **Important:** configuration files provided in this repository are for illustration purposes only. It's *highly recommended* you create your own by making a GET request to the 'Find Data Stream by ID' endpoint and using the response object as a template. See [Datorama's developer documentation](https://developers.datorama.com/docs/platform-api/) for more information.
+- **Data stream settings**
+      - Create a JSON configuration file for each data source containing the default settings of the stream to be created. 
+      **Important:** configuration files provided in this repository are for illustration purposes only. It's *highly recommended* you create your own by making a GET request to the 'Find Data Stream by ID' endpoint and using the response object as a template. See [Datorama's developer documentation](https://developers.datorama.com/docs/platform-api/) for more information.
       Files *must* be in the working directory of python script file, and be named in the lowercase of the data source name (with spaces and dashes replaced with underscores) with '_config' appended to the file name. (for example, a configuration file for 'Facebook-Ads' should be named 'facebook_ads_config.json')
       - Settings that need to be assigned programatically may be done in the `set_config()` function. See function definition for examples.
       
