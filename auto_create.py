@@ -15,10 +15,10 @@ create_datastreams_endpoint = 'https://api.datorama.com/v1/data-streams'
 process_datastreams_endpoint = 'https://api.datorama.com/v1/data-streams/process'
 
 workspace_source_list = {
-    27254: ['Facebook-Ads'],
-    17259: ['Google AdWords'],
-    27405: ['Bing Ads'],
-    27501: ['Facebook-Ads']
+    77254: ['Facebook-Ads'],
+    27259: ['Google AdWords'],
+    37405: ['Bing Ads'],
+    37501: ['Facebook-Ads']
 
 }
 
@@ -125,7 +125,7 @@ def set_config(default_config, data_source, auth_id, profile, workspace_id, pare
     default_config['config']['account_id'] = profile['externalIdentifier']
     default_config['config']['externalIdentifier'] = profile['externalIdentifier']
 
-    if data_source == 'Facebook-Ads' and workspace_id == 27254:
+    if data_source == 'Facebook-Ads' and workspace_id == 77254:
         # default_config['parentInstanceId'] = 1364659
         default_config['parentInstanceId'] = parent_id
         default_config['name'] = 'Facebook_Ads_ ({} ({}))'.format(profile['name'],
@@ -133,7 +133,7 @@ def set_config(default_config, data_source, auth_id, profile, workspace_id, pare
         default_config['templateId'] = 23743
         default_config['customAttribute3'] = ''
 
-    elif data_source == 'Facebook-Ads' and workspace_id == 27501:
+    elif data_source == 'Facebook-Ads' and workspace_id == 37501:
         default_config['parentInstanceId'] = 'null'
         default_config['name'] = 'Facebook_Ads_Delivery_ ({} ({}))'.format(profile['name'],
                                                                  profile['externalIdentifier'])
