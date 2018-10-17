@@ -1,19 +1,3 @@
-"""
-    This automation script will re-process all failed jobs of enabled API data streams.
-    Use case: accounts with thousands of data streams (e.g: large trading desks)
-
-    Instructions: assign the following 2 global variables:
-    'auth_token' (string): should be set to the API user's Access Token, which may be
-    found under the 'General Info' tab of the user's profile page
-    e.g: auth_token = 'dato-api-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
-
-    'workspaces' (list): should be set to the list of workspaces whose streams you'd wish
-    to have auto-processed
-    e.g: workspaces = [31415, 16180, 27183]
-
-    Todo: implement logging
-"""
-
 import requests
 import datetime
 import json
